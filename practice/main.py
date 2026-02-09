@@ -35,8 +35,7 @@ async def delete_item(item_id: int):
     if item_id not in items_db:
         raise HTTPException(status_code=404, detail="Item not found")
     del items_db[item_id]
-    
 
-#this is a test push
+#fbfbfggkojkj
 
-# this is my 
+ 
