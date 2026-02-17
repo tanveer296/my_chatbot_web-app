@@ -1,0 +1,78 @@
+<!-- 
+    ============================================
+    LOGIN PAGE - HTML STRUCTURE
+    ============================================
+    This is the login form where users enter their credentials.
+    When submitted, JavaScript sends the data to the Python backend.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding - supports all languages and symbols -->
+    <meta charset="UTF-8">
+    
+    <!-- Responsive design - makes page work on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title shown in browser tab -->
+    <title>Login - FastAPI Auth Demo</title>
+    
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <!-- Main container - the white card that holds everything -->
+    <div class="container">
+        <!-- Page heading with emoji icon -->
+        <h1>Login</h1>
+        
+        <!-- Instruction text for user -->
+        <p>Enter your credentials</p>
+
+        <!-- Error message box - hidden by default, shown by JavaScript on login failure -->
+        <div id="errorMessage" class="error"></div>
+
+        <!-- Login form - when submitted, JavaScript intercepts it (see login.js) -->
+        <form id="loginForm">
+            <!-- Email input field and label -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <!-- 
+                    Input type="email" provides basic email validation
+                    id="email" allows JavaScript to find this field
+                    required means the field must be filled before submitting
+                -->
+                <input type="email" id="email" required>
+            </div>
+
+            <!-- Password input field and label -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <!-- 
+                    Input type="password" hides the characters as you type
+                    id="password" allows JavaScript to access this field
+                -->
+                <input type="password" id="password" required>
+            </div>
+
+            <!-- Submit button - triggers form submission -->
+            <!-- id="loginButton" allows JavaScript to disable it during login -->
+            <button type="submit" id="loginButton">Sign In</button>
+        </form>
+
+        <!-- Info box showing demo credentials -->
+        <div class="info">
+            <strong>Demo:</strong> admin@example.com / password123
+        </div>
+    </div>
+
+    <!-- 
+        Link to external JavaScript file
+        This file handles form submission and communication with backend
+        Placed at end so HTML loads before JavaScript runs
+    -->
+    <script src="/static/login.js"></script>
+</body>
+</html>
+
+
